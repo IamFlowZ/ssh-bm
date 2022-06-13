@@ -55,13 +55,20 @@ Add additional notes to deploy this on a live system
     for the Code of Conduct
 
 ## Usage
-ssh-bm cms -> ssh into cms
-ssh-bm add cms user@23.12.12.12 -> adds bm
-ssh-bm update cms user@23.12.12.13 -> updates
-ssh-bm delete cms -> removes cms
-ssh-bm find cms -> prints bookmark to terminal
-ssh-bm X --help -> print help statement
-ssh-bm reset -> resets collection after confirmation
+> ssh-bm cms -> ssh into cms
+
+> ssh-bm add cms user@23.12.12.12 -> adds bm
+
+> ssh-bm update cms user@23.12.12.13 -> updates
+
+> ssh-bm delete cms -> removes cms
+
+> ssh-bm find cms -> prints bookmark to terminal
+
+> ssh-bm X --help -> print help statement
+
+> ssh-bm reset -> resets collection after confirmation
+
 
 ## Contributing
 
