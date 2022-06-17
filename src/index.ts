@@ -1,5 +1,4 @@
-import { parse } from "https://deno.land/std@0.143.0/flags/mod.ts";
-import { exec } from "https://deno.land/x/exec/mod.ts";
+import { parse, exec } from './deps.ts';
 
 import { BookMark, BookMarkCollection } from "./bookmarks.ts";
 

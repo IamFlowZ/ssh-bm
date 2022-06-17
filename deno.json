@@ -1,0 +1,5 @@
+{
+    "tasks": {
+        "compile": "deno compile --allow-read --allow-write --allow-run=ssh --output dist/ssh-bm src/index.ts"
+    }
+}

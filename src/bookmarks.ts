@@ -113,6 +113,7 @@ export class BookMarkCollection {
   }
 
   async reset() {
+    this.bookmarks = {};
     await Deno.writeTextFile("./bookmarks.json", JSON.stringify({}));
   }
 }
