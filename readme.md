@@ -4,9 +4,8 @@ An ssh bookmarking program.
 
 ## Getting Started
 
-These instructions will give you a copy of the project up and running on your
-local machine for development and testing purposes. See deployment for notes on
-deploying the project on a live system.
+1. Clone this repo
+2. run `deno task compile` to get a executable
 
 ### Prerequisites
 
@@ -14,41 +13,18 @@ Requirements for the software and other tools to build, test and push
 
 - [deno](https://deno.land)
 
-### Installing
-
-A step by step series of examples that tell you how to get a development
-environment running
-
-Say what the step will be
-
-    Give the example
-
-And repeat
-
-    until finished
-
-End with an example of getting some data out of the system or using it for a
-little demo
-
 ## Running the tests
 
-Explain how to run the automated tests for this system
-
-### Sample Tests
-
-Explain what these tests test and why
-
-    Give an example
-
-### Style test
-
-Checks if the best practices and the right coding style has been used.
-
-    Give an example
+`deno test test` - runs all tests in the *test* directory
 
 ## Deployment
 
-Add additional notes to deploy this on a live system
+Two options for using the built application
+1. Add the dist directory to your PATH environment variable
+
+or
+
+2. Add the compiled binary to a directory already in your PATH variable (/usr/bin is pretty standard).
 
 ## Built With
 
@@ -59,17 +35,17 @@ Add additional notes to deploy this on a live system
 
 > ssh-bm cms -> ssh into cms
 
-> ssh-bm add cms user@23.12.12.12 -> adds bm
+> ssh-bm put cms user@23.12.12.12 -> adds/updates bookmark named cms
 
-> ssh-bm update cms user@23.12.12.13 -> updates
-
-> ssh-bm delete cms -> removes cms
+> ssh-bm wipe cms -> removes cms
 
 > ssh-bm find cms -> prints bookmark to terminal
 
+> ssh-bm list -> lists all available bookmarks
+
 > ssh-bm X --help -> print help statement
 
-> ssh-bm reset -> resets collection after confirmation
+> ssh-bm flush -> resets collection after confirmation
 
 ## Contributing
 
@@ -84,8 +60,8 @@ versions available, see the
 
 ## Authors
 
-- **Billie Thompson** - _Provided README Template_ -
-  [PurpleBooth](https://github.com/PurpleBooth)
+- **Dakota Lewallen** - _Original Maintainer_ -
+  [IamFlowZ](https://github.com/IamFlowZ)
 
 See also the list of
 [contributors](https://github.com/PurpleBooth/a-good-readme-template/contributors)
@@ -93,11 +69,7 @@ who participated in this project.
 
 ## License
 
-This project is licensed under the [CC0 1.0 Universal](LICENSE.md) Creative
-Commons License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the [Apache](LICENSE.md) License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code is used
-- Inspiration
-- etc

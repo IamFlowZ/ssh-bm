@@ -11,7 +11,7 @@ const cmdArgs = rawArgs["_"];
 
 class App {
   public bookmarks: BookMarkCollection;
-  static managementVerbs = ["put", "delete", "find", "reset"];
+  static managementVerbs = ["put", "wipe", "find", "flush", "list"];
 
   constructor(
     public rawArgs: { [k: string]: string | number },
@@ -60,7 +60,7 @@ class App {
     Deno.exit(returnCode);
   }
 
-  async delete(name: string) {
+  async wipe(name: string) {
     const returnCode = await this.bookmarks.delete(name);
     Deno.exit(returnCode);
   }
@@ -75,18 +75,22 @@ class App {
     Deno.exit(0);
   }
 
+  async list() {
+    console.table((this.bookmarks.bookmarks));
+  }
+
   help() {
     console.log(`
 ssh-bm cms -> ssh into cms
-ssh-bm add cms user@23.12.12.12 -> adds bm
-ssh-bm update cms user@23.12.12.13 -> updates
-ssh-bm delete cms -> removes cms
+ssh-bm put cms user@23.12.12.12 -> adds/updates bookmark named cms
+ssh-bm wipe cms -> removes cms
 ssh-bm find cms -> prints bookmark to terminal
+ssh-bm list -> lists all available bookmarks
 ssh-bm X --help -> print help statement
-ssh-bm reset -> resets collection after confirmation`);
+ssh-bm flush -> resets collection after confirmation`);
   }
 
-  async reset() {
+  async flush() {
     await this.bookmarks.reset();
     Deno.exit(1);
   }
