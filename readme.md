@@ -2,6 +2,9 @@
 
 An ssh bookmarking program.
 
+## Basic Usage
+![Terminal depicting basic usage](public/basic_usage.png "Basic Usage")
+
 ## Getting Started
 
 1. Clone this repo
